@@ -1,25 +1,10 @@
 <?php
 
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\CourseController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-Route::middleware('auth:sanctum')->post('/posts', [PostController::class, 'create'])->name('create');
-Route::get('/posts/{id?}', [PostController::class, 'read'])->name('read');
-Route::middleware('auth:sanctum')->put('/posts/{id}', [PostController::class, 'update'])->name('update');
-Route::middleware('auth:sanctum')->delete('/posts/{id}', [PostController::class, 'delete'])->name('delete');
+Route::middleware(['auth:sanctum', "throttle:5,1"])->post('/courses', [CourseController::class, 'create'])->name('create');
+Route::middleware("throttle:5,1")->get('/courses/{id?}', [CourseController::class, 'read'])->name('read');
+Route::middleware(['auth:sanctum', "throttle:5,1"])->put('/courses/{id}', [CourseController::class, 'update'])->name('update');
+Route::middleware(['auth:sanctum', "throttle:5,1"])->delete('/courses/{id}', [CourseController::class, 'delete'])->name('delete');

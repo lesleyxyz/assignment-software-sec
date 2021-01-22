@@ -128,5 +128,8 @@
                 </div>
             </div>
         </div>
+        <footer style="position:fixed;bottom:0;right:0;margin-right: 1vw;float:right;text-align: right">
+            <a href="/privacy" target="_blank" style="color:blue">Privacy Statement</a>
+        </footer>
     </body>
 </html>
