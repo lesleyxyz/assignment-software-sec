@@ -16,8 +16,16 @@
 * Datum aanmaken register: 22/01/2021
 * Verwerkingsactiviteiten van bijzondere persoonsgegevens: NVT
 
+# Rate limiting
+API: 5x/minuut
+Login: 1x/minuut
+
 # REST API
 ## Methods/CORS
 Alle methodes zijn toegestaan vanaf *.lesley.xyz op alle /api endpoints
 
-## 
+## Test key
+Authorization: Bearer kNxBt1G84JXjpphmGvlsmBtZ69pUzrNVF4PatQnD
+
+endpoint:
+/api/courses
