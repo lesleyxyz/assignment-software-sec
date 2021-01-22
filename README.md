@@ -1,3 +1,10 @@
+Publieke URL: https://softsec.lesley.xyz/
+
+# Beschrijving
+Toepassing is standaard register/login met API token generation.
+Je kan courses bezien, maken, wijzigen en deleten
+
+
 # Verwerkingsregister
 * Contactgegevens:
     * Naam: Lesley De Keyser
